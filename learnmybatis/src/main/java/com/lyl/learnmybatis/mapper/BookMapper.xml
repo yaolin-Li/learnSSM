@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyl.learnmybatis.mapper.BookMapper">
+    <insert id="addBook" parameterType="com.lyl.learnmybatis.entity.Book">
+        insert into book(name,author) values (#{name},#{author})
+    </insert>
+    <delete id="deleteBookById" parameterType="int">
+        delete from book where id=#{id}
+    </delete>
+    <update id="updateBookById" parameterType="com.lyl.learnmybatis.entity.Book">
+        update book set name=#{name},author=#{author} where id=#{id}
+    </update>
+    <select id="getBookById" parameterType="int" resultType="com.lyl.learnmybatis.entity.Book">
+        select * from book where id=#{id}
+    </select>
+    <select id="getAllBooks" resultType="com.lyl.learnmybatis.entity.Book">
+        select * from book
+    </select>
+</mapper>
