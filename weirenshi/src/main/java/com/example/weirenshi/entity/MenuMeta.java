@@ -2,6 +2,9 @@ package com.example.weirenshi.entity;
 
 import java.io.Serializable;
 
+/**
+ * Created by sang on 2017/12/30.
+ */
 public class MenuMeta implements Serializable {
 
     private boolean keepAlive;
